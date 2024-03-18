@@ -1,7 +1,7 @@
 {
   "name": "react-ecommerce",
   "version": "0.1.0",
-  "proxy":"https://mern-eccom.onrender.com",
+  "proxy":"https://mern-eccom-orpin.vercel.app",
   "private": true,
   "dependencies": {
     "@headlessui/react": "^1.7.14",
