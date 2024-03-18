@@ -1,7 +1,7 @@
 
 export function fetchProductById(id) {
   return new Promise(async (resolve) => {
-    const response = await fetch('https://mern-eccom.onrender.com/products/' + id);
+    const response = await fetch('https://mern-eccom-orpin.vercel.app/products/' + id);
     const data = await response.json();
     resolve({ data });
   });
@@ -9,7 +9,7 @@ export function fetchProductById(id) {
 
 export function createProduct(product) {
   return new Promise(async (resolve) => {
-    const response = await fetch('https://mern-eccom.onrender.com/products/', {
+    const response = await fetch('https://mern-eccom-orpin.vercel.app/', {
       method: 'POST',
       body: JSON.stringify(product),
       headers: { 'content-type': 'application/json' },
@@ -58,7 +58,7 @@ export function fetchProductsByFilters(filter, sort, pagination, admin) {
 
   return new Promise(async (resolve) => {
     const response = await fetch(
-      'https://mern-eccom.onrender.com/products?' + queryString
+      'https://mern-eccom-orpin.vercel.app/products?' + queryString
     );
     const data = await response.json();
     const totalItems = await response.headers.get('X-Total-Count');
@@ -68,7 +68,7 @@ export function fetchProductsByFilters(filter, sort, pagination, admin) {
 
 export function fetchCategories() {
   return new Promise(async (resolve) => {
-    const response = await fetch('https://mern-eccom.onrender.com/categories');
+    const response = await fetch('https://mern-eccom-orpin.vercel.app/categories');
     const data = await response.json();
     resolve({ data });
   });
@@ -76,7 +76,7 @@ export function fetchCategories() {
 
 export function fetchBrands() {
   return new Promise(async (resolve) => {
-    const response = await fetch('https://mern-eccom.onrender.com/brands');
+    const response = await fetch('https://mern-eccom-orpin.vercel.app/brands');
     const data = await response.json();
     resolve({ data });
   });
