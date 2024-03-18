@@ -20,7 +20,7 @@ export const addToCartAsync = createAsyncThunk(
 );
 
 export const fetchItemsByUserIdAsync = createAsyncThunk(
-  'cart/fetchItemsByUserId',
+  'https://mern-eccom.onrender.com/cart/fetchItemsByUserId',
   async () => {
     const response = await fetchItemsByUserId();
     // The value we return becomes the `fulfilled` action payload
@@ -29,7 +29,7 @@ export const fetchItemsByUserIdAsync = createAsyncThunk(
 );
 
 export const updateCartAsync = createAsyncThunk(
-  'cart/updateCart',
+  'https://mern-eccom.onrender.com/cart/updateCart',
   async (update) => {
     const response = await updateCart(update);
     // The value we return becomes the `fulfilled` action payload
@@ -38,7 +38,7 @@ export const updateCartAsync = createAsyncThunk(
 );
 
 export const deleteItemFromCartAsync = createAsyncThunk(
-  'cart/deleteItemFromCart',
+  'https://mern-eccom.onrender.com/cart/deleteItemFromCart',
   async (itemId) => {
     const response = await deleteItemFromCart(itemId);
     // The value we return becomes the `fulfilled` action payload
