@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { addToCart, deleteItemFromCart, fetchItemsByUserId, resetCart, updateCart } from './cartAPI';
+const apiurl = "https://mern-eccom.onrender.com"
 
 const initialState = {
   status: 'idle',
